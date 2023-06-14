@@ -1,0 +1,47 @@
+<%-include("./../template/topo")%>
+<h1>Editar Produto</h1>
+
+
+
+<form action="/produtos/editar" method="post">
+        <input type="hidden" name="id" class="form-control" value="<%=produto.id %>">
+    <div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="nome">Nome do Produto</label>
+            <input type="text" name="nome" class="form-control" value="<%=produto.nome %>">
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="form-group">
+            <label for="valor_compra">Valor Compra</label>
+            <input type="text" name="valor_compra" class="form-control" value="<%=produto.valor_compra %>">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="form-group">
+            <label for="valor_venda">Valor Venda</label>
+            <input type="text" name="valor_venda" class="form-control" value="<%=produto.valor_venda %>">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="form-group">
+            <label for="estoque_minimo">Estoque Mínimo</label>
+            <input type="text" name="estoque_minimo" class="form-control" value="<%=produto.estoque_minimo %>">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="form-group">
+            <label for="estoque_atual">Estoque Atual</label>
+            <input type="text" name="estoque_atual" class="form-control" value="<%=produto.estoque_atual %>">
+        </div>
+    </div>
+</div>
+    <input type="submit" value="Editar Produto" class="btn btn-primary mt-4">
+
+</form>
+<%-include("./../template/rodape")%>
+    

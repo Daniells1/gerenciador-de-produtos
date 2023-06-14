@@ -1,0 +1,46 @@
+<%-include("./../template/topo")%>
+<h1>Cadastrar Produto</h1>
+
+
+
+<form action="/produtos/novo" method="post">
+    <div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <label for="nome">Nome do Produto</label>
+            <input type="text" name="nome" class="form-control">
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="form-group">
+            <label for="valor_compra">Valor Compra</label>
+            <input type="text" name="valor_compra" class="form-control">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="form-group">
+            <label for="valor_venda">Valor Venda</label>
+            <input type="text" name="valor_venda" class="form-control">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="form-group">
+            <label for="estoque_minimo">Estoque Mínimo</label>
+            <input type="text" name="estoque_minimo" class="form-control">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="form-group">
+            <label for="estoque_atual">Estoque Atual</label>
+            <input type="text" name="estoque_atual" class="form-control">
+        </div>
+    </div>
+</div>
+    <input type="submit" value="Cadastrar Produto" class="btn btn-primary mt-4">
+
+</form>
+<%-include("./../template/rodape")%>
+    

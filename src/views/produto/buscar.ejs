@@ -1,0 +1,36 @@
+<%-include("./../template/topo")%>
+
+<h1>Buscar Produto</h1>
+<% if(produtos !== "undefined" && produtos.length > 0){ %>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Valor Compra</th>
+            <th>Valor Venda</th>
+            <th>Estoque Mínimo</th>
+            <th>Estoque Atual</th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <% produtos.forEach((prod) => { %>
+        <tr>
+            <td><%=prod.nome %></td>
+            <td>R$ <%=prod.valor_compra%></td>
+            <td>R$ <%=prod.valor_venda %></td>
+            <td><%=prod.estoque_minimo %></td>
+            <td><%=prod.estoque_atual %></td>
+            <td>
+                <a href="/produtos/editar/<%=prod.id%>" class="btn btn-warning">Editar</a>
+                <a href="/produtos/excluir/<%=prod.id%>" onclick="return confirm('Deseja mesmo excluir o produto (<%=prod.nome%>)? ')" class="btn btn-danger">Excluir</a>
+            </td>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+<% } %>
+<%-include("./../template/rodape")%>
+    
